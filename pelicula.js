@@ -176,4 +176,3 @@ export class Pelicula{
   setPaused(value){this.paused=value;}
   dispose(){cancelAnimationFrame(this.raf);removeEventListener('resize',this.resize);}
 }
-
