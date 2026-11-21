@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#000000">
+  <meta name="description" content="Feliz aniversario, mi amor. Un viaje para Dany.">
+  <title>Feliz aniversario, mi amor · Dany</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20'/%3E%3Cpath d='M20 30S7 22 7 15a7 7 0 0113-3 7 7 0 0113 3c0 7-13 15-13 15' fill='white'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-running="false" data-stage="welcome">
+  <canvas id="film" tabindex="-1" aria-label="Un Porsche rosa enciende sus faros visto de frente y sale de un túnel hacia la ciudad."></canvas>
+  <video id="drift-video" muted loop playsinline preload="none" hidden aria-hidden="true" tabindex="-1"></video>
+  <p id="city-caption" aria-hidden="true" hidden></p>
+  <aside id="moments" aria-label="Nuestros recuerdos" hidden inert>
+    <div class="moment-frame">
+      <div class="moment-stage">
+        <img id="moment-image" alt="" decoding="async" hidden>
+        <video id="moment-video" playsinline preload="metadata" hidden></video>
+      </div>
+      <div id="moment-controls" hidden><button id="moment-toggle" type="button">Reproducir</button><button id="moment-sound" type="button" aria-pressed="false">Silenciar</button></div>
+      <p id="moment-message" role="status"></p>
+      <nav class="moment-navigation" aria-label="Recorrer nuestros momentos"><button id="moment-previous" type="button">Anterior</button><p id="moment-caption" aria-live="polite"></p><button id="moment-next" type="button">Siguiente</button></nav>
+    </div>
+  </aside>
+  <canvas id="season-film" tabindex="-1" aria-label="El Porsche rosa atraviesa las cuatro estaciones visto de perfil." hidden inert></canvas>
+  <div id="season-story" hidden>
+    <div class="season-copy">
+      <p id="season-caption"><span id="season-line"></span><span id="season-dots" aria-hidden="true" hidden><span>.</span><span>.</span><span>.</span></span></p>
+      <div id="season-choices" role="group" aria-labelledby="season-line" hidden>
+        <div class="answer-slot"><button id="answer-yes" type="button">Sí</button></div>
+        <div class="answer-slot"><button id="answer-no" type="button">No</button></div>
+      </div>
+    </div>
+  </div>
+  <div id="anniversary-ending" hidden aria-labelledby="ending-title">
+    <canvas id="ending-atmosphere" aria-hidden="true"></canvas>
+    <div class="ending-copy"><h2 id="ending-title">Dia uno de nuestro segundo año</h2><p id="ending-subtitle">Te amo muchisimo mi princesita hermosa jsj</p></div>
+    <canvas id="love-heart" width="1200" height="675" role="img" aria-label="Una galaxia de luz rosa y estrellas que forma un corazón"></canvas>
+  </div>
+  <main><section id="intro" aria-labelledby="intro-title"><div class="welcome-copy"><h1 id="intro-title">Feliz aniversario<br>mi amor,<span>quieres empezar?</span></h1><button id="start" disabled>Comenzar</button><p id="load-error" role="alert" hidden></p></div></section></main>
+  <button id="sound-retry" hidden>Activar sonido</button>
+  <button id="video-retry" hidden>Continuar escena</button>
+  <audio id="song" src="assets/audio/take-you-dancing.mp3" preload="auto"></audio>
+  <div id="announcement" class="sr-only" aria-live="polite"></div>
+  <noscript><div class="no-script">Activa JavaScript para comenzar.</div></noscript>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
